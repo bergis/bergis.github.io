@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resume for Johan Berglund</title>
+<link rel="canonical" href="https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json">
+
+<meta http-equiv="Version" content="v1.0.0">
+<meta http-equiv="Generator" content="jsonresume-theme-rickosborne 2022.9.16-T1450" about="Written by Rick Osborne (rickosborne.org)">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap');
+body {
+    font-family: 'Roboto Slab', 'Gentium Book Basic', 'Gentium Plus', 'Gentium Basic', 'Times New Roman', 'Times', ui-serif, serif;
+}
+</style>
+<style>:root {
+    --text: 1.92vw;
+    --cadence-quarter: calc(var(--text) * 0.45);
+    --cadence-half: calc(var(--text) * 0.9);
+    --cadence-one: calc(var(--text) * 1.8);
+    --cadence-two: calc(var(--text) * 3.6);
+    --text-color: #222;
+    --light: #444;
+    --lighter: #666;
+    --ghostly: #eee;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background: #555;
+    margin: 0;
+    padding: 0;
+    font-size: var(--text);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-indent: 0;
+    list-style: none;
+    font-weight: 200;
+    font-style: normal;
+    text-decoration: none;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-size: var(--text);
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow-y: auto;
+    background: white;
+    color: var(--text-color);
+    max-width: calc(var(--text) * 50.0);
+    margin: var(--cadence-half) auto;
+    padding: 0;
+    box-shadow: 0 0 var(--cadence-half) black;
+    line-height: var(--cadence-one);
+}
+
+a, a:visited, a:focus, a:hover {
+    color: #248 !important;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #36c !important;
+    text-decoration: underline;
+}
+
+#resume {
+    padding: var(--cadence-one);
+    align-content: start;
+    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#basics {
+    display: grid;
+    grid-template-areas:
+        "name label"
+        "summary summary";
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 0;
+}
+
+#person-name {
+    font-size: 200%;
+    line-height: var(--cadence-two);
+    grid-area: name;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+#person-label {
+    font-size: 150%;
+    line-height: var(--cadence-two);
+    grid-area: label;
+    color: var(--light);
+}
+
+#person-summary {
+    grid-area: summary;
+    color: var(--lighter);
+    font-style: italic;
+}
+
+.has-image #top {
+    display: flex;
+    flex-direction: row;
+}
+
+.has-image #basics {
+    display: block;
+}
+
+.has-image #person-name {
+    line-height: inherit;
+    margin-bottom: var(--cadence-quarter);
+}
+
+.has-image #person-label {
+    line-height: inherit;
+    font-size: 120%;
+    margin-bottom: var(--cadence-quarter);
+}
+
+.has-image #person-summary {
+    line-height: 120%;
+}
+
+.person-location-parts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 var(--cadence-quarter);
+}
+
+#avatar {
+    max-width: 60%;
+    padding: 0 20%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: var(--cadence-half);
+}
+
+#top {
+    flex-basis: 100%;
+    order: 1;
+}
+
+#left {
+    padding-right: var(--cadence-one);
+    grid-area: left;
+    min-width: 60%;
+    flex-basis: 60%;
+    order: 2;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+#right {
+    /*border-left: thin solid var(--ghostly);*/
+    padding-left: var(--cadence-one);
+    grid-area: right;
+    min-width: 30%;
+    flex-basis: 30%;
+    order: 3;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#right, #right h1, #right h2, #right h3, #right h4, #right h5, #right h6 {
+    font-size: 90%;
+}
+
+.list h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--lighter);
+    line-height: var(--cadence-two);
+}
+
+.list {
+    margin-bottom: 0;
+}
+
+.list header {
+    color: var(--lighter);
+}
+
+.list header > *:first-child {
+    color: var(--text-color);
+}
+
+.list header > * {
+    display: inline;
+}
+
+.list header .between:after, .language-item .between:after, .person-location-parts .between:after {
+    content: ",\20";
+    color: var(--lighter);
+}
+
+#right .list header > *:first-child, .list header > *:first-child {
+    padding-left: 0;
+    border-left: none;
+    margin-left: 0;
+}
+
+#right .list header > *:last-child:after, .list header > *:last-child:after {
+    content: none;
+    padding-right: unset;
+}
+
+.list header > *:first-child {
+    font-weight: 400;
+}
+
+.dates {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.date-delimiter::before {
+    content: "-";
+}
+
+.dates {
+    break-inside: avoid;
+    white-space: nowrap;
+}
+
+.dates.same-dates .date-start,
+.dates.same-dates .date-delimiter,
+.dates.no-start .date-delimiter,
+.dates.no-end .date-delimiter {
+    display: none;
+}
+
+.education-summary, .work-summary, .project-description {
+    font-style: italic;
+}
+
+.work-domain, .work-location, .work-employer {
+    letter-spacing: -0.05em;
+    color: var(--lighter);
+}
+
+.work-item {
+    margin-bottom: var(--cadence-half);
+}
+
+.work-highlights-list {
+    margin-left: var(--cadence-one);
+}
+
+.work-highlights-item {
+    list-style-type: square;
+}
+
+.work-highlights-item ::marker {
+    color: var(--light);
+}
+
+.work-highlights-item .first-word {
+    font-style: italic;
+}
+
+.skill-item, .interest-item {
+    margin: var(--cadence-quarter) 0;
+}
+
+.skill-item header, .interest-item header {
+    line-height: 120%;
+}
+
+.skill-item:first-of-type, .interest-item:first-of-type {
+    margin-top: 0;
+}
+
+.skill-keyword-list, .interest-keyword-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: calc(var(--cadence-quarter) * 0.5);
+}
+
+.skill-keyword-item, .interest-keyword-item {
+    background-color: var(--ghostly);
+    color: var(--light);
+    border-radius: var(--cadence-quarter);
+    padding: calc(var(--cadence-quarter) * 0.5) var(--cadence-quarter);
+    font-size: 90%;
+    line-height: 90%;
+    text-wrap: avoid;
+    white-space: nowrap;
+}
+
+.skill-level {
+    color: var(--lighter);
+    font-size: 90%;
+    margin: var(--cadence-quarter);
+}
+
+#top {
+    grid-area: top;
+}
+
+#bottom {
+    grid-area: bottom;
+}
+
+#person-url, #person-email, #person-location, .profile-url {
+    display: flex;
+    flex-direction: row;
+    gap: var(--cadence-quarter);
+    align-items: start;
+    align-content: start;
+}
+
+.icon {
+    width: calc(var(--cadence-one) * 0.8);
+    height: calc(var(--cadence-one) * 0.8);
+    opacity: 25%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: calc(var(--cadence-one) * 0.1);
+    padding-left: 0;
+}
+
+#basics-profiles, #basics-contact, #basics-url, #basics-email, #basics-location, .profile-network {
+    display: none;
+}
+
+#person-location .between {
+    width: 0;
+    margin-left: calc(var(--cadence-quarter) * -1.0);
+}
+
+.project-item header {
+    line-height: 120%;
+}
+
+.project-url-a, .project-description {
+    font-size: 90%;
+    line-height: 120%;
+}
+
+.project-description {
+    margin-top: var(--cadence-quarter);
+}
+
+.project-item {
+    margin-bottom: var(--cadence-quarter);
+}
+
+@media print {
+    :root {
+        --text: 8.75pt;
+        --cadence-quarter: calc(var(--text) * 0.4);
+        --cadence-half: calc(var(--text) * 0.8);
+        --cadence-one: calc(var(--text) * 1.6);
+        --cadence-two: calc(var(--text) * 3.2);
+    }
+
+    html {
+        background-color: transparent;
+    }
+
+    body {
+        box-shadow: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        line-height: 130%;
+        break-inside: auto;
+        page-break-inside: auto;
+    }
+
+    a, a:visited, a:focus, a:hover {
+        color: var(--text-color) !important;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    #resume {
+        padding: 0;
+        margin: 0;
+    }
+
+    #top {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    #left, #right, #resume {
+        break-before: avoid;
+        page-break-before: avoid;
+        break-inside: auto;
+        page-break-inside: auto;
+    }
+
+    #bottom {
+        page-break-before: avoid;
+        break-before: avoid;
+    }
+
+    #right {
+        padding-top: var(--cadence-half);
+    }
+
+    #left > section, #right > section {
+        break-before: avoid;
+        break-inside: auto;
+        page-break-before: avoid;
+        page-break-inside: auto;
+    }
+
+    .work-highlights-item {
+        font-size: 90%;
+        line-height: 120%;
+    }
+
+    #person-summary, .list h1 {
+        color: var(--light);
+    }
+
+}
+
+@media print and (-webkit-min-device-pixel-ratio:0) {
+    /* Safari */
+    .work-item {
+        margin-bottom: var(--cadence-quarter);
+    }
+    #resume {
+        padding-top: var(--cadence-quarter);
+    }
+    /*.list h1 {*/
+    /*    line-height: 130%;*/
+    /*}*/
+}
+
+@media screen {
+    #how-to-print {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: calc(var(--cadence-half) + 30%);
+        background-color: hsla(60, 100%, 80%, 95%);
+        padding: var(--cadence-quarter);
+        font-size: 80%;
+        border-top: thin solid hsla(60, 100%, 40%, 95%);
+        border-left: thin solid hsla(60, 100%, 40%, 95%);
+        line-height: 120%;
+    }
+}
+</style>
+
+</head>
+<body class="has-image">
+<article id="resume">
+
+<section id="left" class=" "><header id="basics"><h1 id="person-name" class=" ">Johan Berglund</h1><span class="between"></span><h2 id="person-label" class=" ">Leader, Agile Coach and DevOps Advocate</h2><span class="between"></span><p id="person-summary" class=" ">I am a tech-savvy servant leader with a relentless passion for personal growth and development.With extensive experience in agile methodologies, DevOps, and team leadership, I have a proven track record of driving organizational transformation and fostering a culture of continuous improvement. I firmly believe in the power of collaboration and teamwork, understanding that we achieve our greatest successes when we work together. My background include leadership roles in software development, IT operations and agile organizations. I have trained and coached hundreds of professionals in agile practices. I bring a unique blend of technical expertise from both software engineering as well as IT operations, agile leadership and a commitment to delivering results, making me a valuable asset for any organization seeking to thrive in the fast-paced world of technology and innovation.</p></header>
+
+<section class="work-list list "><h1>Employment</h1><div class=" work-item item-0  item"><header><h2 class="work-position ">Tech Enablement Manager</h2><span class="between"></span><span class="dates work-dates has-start no-end "><span class=" date-start">Jan 31, 2022</span><span class="date-delimiter"></span></span><span class="between"></span><a href="https://www.linkedin.com/company/spp/" class="work-employer" target="_blank" rel="external">SPP</a><span class="between"></span><span class="work-location ">Stockholm, Sweden</span></header>
+        <main>
+        <p class="work-summary ">My responsibility was to improve the infrastructure and integration domains to better support the agile ways of working and a transition from outsourced IT to Azure cloud.</p>
+        <ul class="work-highlights-list list "><li class=" work-highlights-item item-0  item"><span class="first-word">Managed</span> two teams of 6 direct reports and 4 consultants (over seas)</li><li class=" work-highlights-item item-1  item"><span class="first-word">Was</span> a member of both the Storebrand Cloud & Security and SPP IT leadership teams.</li><li class=" work-highlights-item item-2  item"><span class="first-word">Product</span> Ownership for the infrastructure domain and a part of the Product Owner team.</li><li class=" work-highlights-item item-3 item-last item"><span class="first-word">Promoted</span> agile and devops practices in various other roles; Trainer/Educator/Facilitator/SPC, Modern Ways of working guild member, Tech Enablement guild/CoP leader and driving the cloud transformation at SPP.</li></ul>
+        </main></div><div class=" work-item item-1  item"><header><h2 class="work-position ">Tech Enablement Manager</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Mar 31, 2020</span><span class="date-delimiter"></span><span class=" date-end">Dec 31, 2021</span></span><span class="between"></span><a href="https://www.linkedin.com/company/spp/" class="work-employer" target="_blank" rel="external">SPP</a><span class="between"></span><span class="work-location ">Stockholm, Sweden</span></header>
+        <main>
+        <p class="work-summary ">My responsibility was to improve the infrastructure domain to better support the agile ways of working by building a enablement team.</p>
+        <ul class="work-highlights-list list "><li class=" work-highlights-item item-0  item"><span class="first-word">Managed</span> a team of 6 and was part of the SPP IT leadership team.</li><li class=" work-highlights-item item-1  item"><span class="first-word">Product</span> Ownership for the infrastructure domain and a part of the Product Owner team.</li><li class=" work-highlights-item item-2 item-last item"><span class="first-word">Promoted</span> agile and devops practices in various other roles; Trainer/Educator/Facilitator/SPC, Modern Ways of working guild member, Tech Enablement guild/CoP leader and driving the cloud transformation at SPP.</li></ul>
+        </main></div><div class=" work-item item-2  item"><header><h2 class="work-position ">Agile/DevOps Coach</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Nov 30, 2018</span><span class="date-delimiter"></span><span class=" date-end">Mar 31, 2020</span></span><span class="between"></span><a href="https://www.linkedin.com/company/tele2/" class="work-employer" target="_blank" rel="external">Tele2</a><span class="between"></span><span class="work-location ">Stockholm, Sweden</span></header>
+        <main>
+        <p class="work-summary ">I was member of a team supporting the organisation with an agile/devops transformation.</p>
+        <ul class="work-highlights-list list "><li class=" work-highlights-item item-0  item"><span class="first-word">Helped</span> teams and management adopting agile and DevOps practices</li><li class=" work-highlights-item item-1  item"><span class="first-word">Trained</span> 120+ persons in agile mindset and practices</li><li class=" work-highlights-item item-2  item"><span class="first-word">Created</span> training materials and training workshops</li><li class=" work-highlights-item item-3  item"><span class="first-word">Workshop</span> facilitation</li><li class=" work-highlights-item item-4  item"><span class="first-word">Coached</span> teams, teammebers and leaders</li><li class=" work-highlights-item item-5 item-last item"><span class="first-word">Supported</span> the organisation in scaling agile (training, facilitation and coaching) with inspiration from the SAFe framework</li></ul>
+        </main></div><div class=" work-item item-3  item"><header><h2 class="work-position ">Agile/DevOps Coach</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Dec 31, 2017</span><span class="date-delimiter"></span><span class=" date-end">Nov 30, 2018</span></span><span class="between"></span><a href="https://www.linkedin.com/company/com-hem-ab/" class="work-employer" target="_blank" rel="external">Com Hem AB</a><span class="between"></span><span class="work-location ">Stockholm, Sweden</span></header>
+        <main>
+        <p class="work-summary ">I was member of a team supporting the organisation with an agile/devops transformation.</p>
+        <ul class="work-highlights-list list "><li class=" work-highlights-item item-0  item"><span class="first-word">Helped</span> teams and management adopting agile and DevOps practices</li><li class=" work-highlights-item item-1  item"><span class="first-word">Trained</span> 120+ persons in agile mindset and practices</li><li class=" work-highlights-item item-2  item"><span class="first-word">Created</span> training materials and training workshops</li><li class=" work-highlights-item item-3  item"><span class="first-word">Workshop</span> facilitation</li><li class=" work-highlights-item item-4  item"><span class="first-word">Coached</span> teams, teammebers and leaders</li><li class=" work-highlights-item item-5 item-last item"><span class="first-word">Supported</span> the organisation in scaling agile (training, facilitation and coaching) with inspiration from the SAFe framework</li></ul>
+        </main></div><div class=" work-item item-4  item"><header><h2 class="work-position ">Manager Team Delivery</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">May 31, 2017</span><span class="date-delimiter"></span><span class=" date-end">Nov 30, 2017</span></span><span class="between"></span><a href="https://www.linkedin.com/company/com-hem-ab/" class="work-employer" target="_blank" rel="external">Com Hem AB</a><span class="between"></span><span class="work-location ">Stockholm, Sweden</span></header>
+        <main>
+        <p class="work-summary ">I managed a team responsible for Com Hems Continuous Delivery platform and implementation. Supporting about 300 developers.</p>
+        <ul class="work-highlights-list list "><li class=" work-highlights-item item-0  item"><span class="first-word">Managed</span> a distributed team (3 in India and 1 in Gothenburg) of a total 6 direct reports</li><li class=" work-highlights-item item-1  item"><span class="first-word">Recruiting</span> new staff and consultants</li><li class=" work-highlights-item item-2  item"><span class="first-word">Facilitated</span> adoption of agile principles within the team</li><li class=" work-highlights-item item-3  item"><span class="first-word">Expanding</span> CI/CD and DevOps to new teams</li><li class=" work-highlights-item item-4  item"><span class="first-word">Technical</span> strategy & Life cycle managment</li><li class=" work-highlights-item item-5  item"><span class="first-word">Member</span> of Lead Architect Board</li><li class=" work-highlights-item item-6 item-last item"><span class="first-word">Budget</span> responsibility</li></ul>
+        </main></div><div class=" work-item item-5  item"><header><h2 class="work-position ">Manager Platform & Delivery</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Feb 28, 2015</span><span class="date-delimiter"></span><span class=" date-end">May 31, 2017</span></span><span class="between"></span><a href="https://www.linkedin.com/company/com-hem-ab/" class="work-employer" target="_blank" rel="external">Com Hem AB</a><span class="between"></span><span class="work-location ">Stockholm, Sweden</span></header>
+        <main>
+        <p class="work-summary ">I managed two teams. The team was responsible for operating and maintaining Com Hems server platforms (operating systems, software applications and supporting systems) and Com Hems Continuous Delivery platform and implementation. Supporting about 300 developers.</p>
+        <ul class="work-highlights-list list "><li class=" work-highlights-item item-0  item"><span class="first-word">Managed</span> a distributed team (3 in India and 2 in Gothenburg) of 16 direct reports</li><li class=" work-highlights-item item-1  item"><span class="first-word">Recruiting</span> new staff and consultants</li><li class=" work-highlights-item item-2  item"><span class="first-word">Facilitated</span> adoption of agile principles within the team</li><li class=" work-highlights-item item-3  item"><span class="first-word">Insourcing</span> of IT services (600+ systems and 3 staff)</li><li class=" work-highlights-item item-4  item"><span class="first-word">Expanding</span> CI/CD and DevOps to new teams</li><li class=" work-highlights-item item-5  item"><span class="first-word">Technical</span> strategy & Life cycle managment</li><li class=" work-highlights-item item-6  item"><span class="first-word">Member</span> of Lead Architect Board</li><li class=" work-highlights-item item-7  item"><span class="first-word">Budget</span> responsibility</li><li class=" work-highlights-item item-8  item"><span class="first-word">Incident</span> / Problem management</li><li class=" work-highlights-item item-9 item-last item"><span class="first-word">Workshop</span> and offsite facilitation</li></ul>
+        </main></div><div class=" work-item item-6  item"><header><h2 class="work-position ">Manager Platform Production</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Apr 30, 2013</span><span class="date-delimiter"></span><span class=" date-end">Feb 28, 2015</span></span><span class="between"></span><a href="https://www.linkedin.com/company/com-hem-ab/" class="work-employer" target="_blank" rel="external">Com Hem AB</a><span class="between"></span><span class="work-location ">Stockholm, Sweden</span></header>
+        <main>
+        <p class="work-summary ">I managed a team responsible for operating the systems for end customer services and supporting systems. This included server hardware, virtualization platform, operating systems and software applications.</p>
+        <ul class="work-highlights-list list "><li class=" work-highlights-item item-0  item"><span class="first-word">Managed</span> a team of 6 direct reports</li><li class=" work-highlights-item item-1  item"><span class="first-word">Recruiting</span> staff and consultants</li><li class=" work-highlights-item item-2  item"><span class="first-word">Technical</span> Strategy and Life Cycle management</li><li class=" work-highlights-item item-3  item"><span class="first-word">Budget</span> responsibility</li><li class=" work-highlights-item item-4  item"><span class="first-word">Incident</span> / Problem Management</li><li class=" work-highlights-item item-5 item-last item"><span class="first-word">Workflow</span> management</li></ul>
+        </main></div><div class=" work-item item-7  item"><header><h2 class="work-position ">Technical Specialist / Project Manager</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Jul 31, 2007</span><span class="date-delimiter"></span><span class=" date-end">Apr 30, 2013</span></span><span class="between"></span><a href="https://www.linkedin.com/company/com-hem-ab/" class="work-employer" target="_blank" rel="external">Com Hem AB</a><span class="between"></span><span class="work-location ">Stockholm, Sweden</span></header>
+        <main>
+        <p class="work-summary ">I had responsebilites as a technical specialist and software developer as well as project manager within the domains of device provisioning, data retention and DNS.</p>
+        <ul class="work-highlights-list list "><li class=" work-highlights-item item-0  item"><span class="first-word">Project</span> Manager of a pre-study/RFQ-process for a new device provisioning system.</li><li class=" work-highlights-item item-1  item"><span class="first-word">Project</span> Manager of an implementation of a service assurance provisioning system.</li><li class=" work-highlights-item item-2 item-last item"><span class="first-word">System</span> Engineer/Software Developer in projects within DNS, device provisioning, mail/web platforms, IPTV and IPv6.</li></ul>
+        </main></div><div class=" work-item item-8  item"><header><h2 class="work-position ">Senior System Engineer</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Jun 30, 2006</span><span class="date-delimiter"></span><span class=" date-end">Jul 31, 2007</span></span><span class="between"></span><a href="https://www.linkedin.com/company/com-hem-ab/" class="work-employer" target="_blank" rel="external">Com Hem</a><span class="between"></span><span class="work-location ">Stockholm, Sweden</span></header>
+        <main>
+        
+        
+        </main></div><div class=" work-item item-9  item"><header><h2 class="work-position ">Senior System Engineer</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">May 31, 2002</span><span class="date-delimiter"></span><span class=" date-end">Jun 30, 2006</span></span><span class="between"></span><a href="https://www.linkedin.com/company/liberty-global/" class="work-employer" target="_blank" rel="external">UPC</a></header>
+        <main>
+        
+        
+        </main></div><div class=" work-item item-10  item"><header><h2 class="work-position ">System Administrator/System Developer</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Dec 31, 2001</span><span class="date-delimiter"></span><span class=" date-end">May 31, 2002</span></span><span class="between"></span><a href="" class="work-employer" target="_blank" rel="external">Targian</a></header>
+        <main>
+        
+        
+        </main></div><div class=" work-item item-11  item"><header><h2 class="work-position ">Consultant - System Engineer</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Jun 30, 1999</span><span class="date-delimiter"></span><span class=" date-end">Jul 31, 2001</span></span><span class="between"></span><a href="https://www.linkedin.com/company/acando/" class="work-employer" target="_blank" rel="external">Acando</a></header>
+        <main>
+        
+        
+        </main></div><div class=" work-item item-12 item-last item"><header><h2 class="work-position ">System Administrator</h2><span class="between"></span><span class="dates work-dates has-start has-end "><span class=" date-start">Dec 31, 1996</span><span class="date-delimiter"></span><span class=" date-end">Dec 31, 1999</span></span><span class="between"></span><a href="https://www.linkedin.com/company/tele2/" class="work-employer" target="_blank" rel="external">Tele2</a></header>
+        <main>
+        
+        
+        </main></div></section>
+
+</section>
+<section id="right" class=" "><img src="johan.jpg" id="avatar" alt="Johan Berglund">
+<section id="contact" class="list">
+                <h1 id="basics-contact" class=" ">Contact</h1>
+            
+            
+            
+            
+                <section id="person-location"><h2 id="basics-location" class=" ">Location</h2><span class="between"></span><img id="img-location" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik04IDBjLTQuNCAwLTggMy42LTggOHMzLjYgOCA4IDggOC0zLjYgOC04LTMuNi04LTgtOHpNNyAxNHYtNWgtNWwxMC01LTUgMTB6Ii8+Cjwvc3ZnPgo=" alt="Location" class="icon"><span class="between"></span><main class="person-location-parts "><span class="person-location-city ">Stockholm</span><span class="between"></span><span class="person-location-countryCode ">SE</span></main></section>
+            
+            <section class="profile-list list "><h2 id="basics-profiles" class=" ">Profiles</h2><div class=" profile-item item-0 item-last item"><a href="https://www.linkedin.com/in/johan-berglund-5236614/" class="profile-url" target="_blank" rel="external">
+                    <span class="profile-network profile-network-LinkedIn ">LinkedIn</span>
+                    <span id="img-LinkedIn" class=" ">LinkedIn</span>
+                    <span class="profile-username ">johan-berglund-5236614</span>
+                </a></div></section>
+        </section>
+<section class="language-list list "><h1>Languages</h1><div class=" language-item item-0  item"><span class="language-language ">Swedish</span><span class="between"></span><span class="language-fluency ">Native Speaker</span></div><div class=" language-item item-1  item"><span class="language-language ">English</span><span class="between"></span><span class="language-fluency ">Full Professional</span></div><div class=" language-item item-2 item-last item"><span class="language-language ">German</span><span class="between"></span><span class="language-fluency ">Elementary</span></div></section>
+<section class="certificate-list list "><h1>Certificates</h1><div class=" certificate-item item-0  item"><header><h2 class="certification-name ">Certified SAFe® 4 Program Consultant</h2><span class="between"></span><a href="https://www.youracclaim.com/badges/ef030d0d-3b84-400c-9a5c-2cc33651ac9c/linked_in_profile" class="certification-issuer" target="_blank" rel="external">Scaled Agile Inc</a></header></div><div class=" certificate-item item-1 item-last item"><header><h2 class="certification-name ">ICAGILE CERTIFIED PROFESSIONAL - AGILE COACHING</h2><span class="between"></span><a href="https://www.icagile.com/credentials/c34894f5-ad23-4593-84fd-5e97090d2661" class="certification-issuer" target="_blank" rel="external">ICAgile</a></header></div></section>
+
+
+
+<section class="skill-list list "><h1>Skills</h1><div class="skill-no-level skill-item item-0  item"><header><h2 class="skill-name ">Leadership and Organisation</h2></header>
+        <ul class="skill-keyword-list list "><li class=" skill-keyword-item item-0  item">Agile Leadership</li><li class=" skill-keyword-item item-1  item">Agile Coaching</li><li class=" skill-keyword-item item-2  item">Scrum and Kanban</li><li class=" skill-keyword-item item-3  item">SAFe SPC</li><li class=" skill-keyword-item item-4  item">Agile Transformation</li><li class=" skill-keyword-item item-5  item">Team dynamics</li><li class=" skill-keyword-item item-6 item-last item">Facilitation and Training</li></ul></div><div class="skill-no-level skill-item item-1 item-last item"><header><h2 class="skill-name ">Technical Background</h2></header>
+        <ul class="skill-keyword-list list "><li class=" skill-keyword-item item-0  item">Software Development Java/C/Python</li><li class=" skill-keyword-item item-1  item">System Administration Unix/Linux</li><li class=" skill-keyword-item item-2  item">Internet Services DNS/Mail/Web</li><li class=" skill-keyword-item item-3  item">CI/CD Github/Gitlab/Jenkins</li><li class=" skill-keyword-item item-4  item">Configuration Management</li><li class=" skill-keyword-item item-5 item-last item">Cloud Docker/Kubernetes/Azure</li></ul></div></section>
+</section>
+</article>
+<footer class="no-print" id="how-to-print"><p>Save a PDF using your browser's Print-to-PDF functionality.  (Don't worry, this won't show up.)</p></footer>
+</body>
+</html>
