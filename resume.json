@@ -4,7 +4,7 @@
     "name": "Johan Berglund",
     "label": "Leader, Agile Coach and DevOps Advocate",
     "image": "johan.jpg",
-    "summary": "I am a tech-savvy servant leader with a relentless passion for personal growth and development. With extensive experience in agile methodologies, DevOps, and team leadership, I have a proven track record of driving organizational transformation and fostering a culture of continuous improvement.<p /> I firmly believe in the power of collaboration and teamwork, understanding that we achieve our greatest successes when we work together. My background include leadership roles in software development, IT operations and agile organizations. I have trained and coached hundreds of professionals in agile practices. I bring a unique blend of technical expertise from both software engineering as well as IT operations, agile leadership and a commitment to delivering results, making me a valuable asset for any organization seeking to thrive in the fast-paced world of technology and innovation.",
+    "summary": "I am a tech-savvy servant leader with a relentless passion for personal growth and development. With extensive experience in agile methodologies, DevOps, and team leadership, I have a proven track record of driving organizational transformation and fostering a culture of continuous improvement.\n\n\n I firmly believe in the power of collaboration and teamwork, understanding that we achieve our greatest successes when we work together. My background include leadership roles in software development, IT operations and agile organizations. I have trained and coached hundreds of professionals in agile practices. I bring a unique blend of technical expertise from both software engineering as well as IT operations, agile leadership and a commitment to delivering results, making me a valuable asset for any organization seeking to thrive in the fast-paced world of technology and innovation.",
     "location": {
       "city": "Stockholm",
       "countryCode": "SE"
@@ -86,7 +86,7 @@
       "startDate": "2017-05-31",
       "endDate": "2017-11-30",
       "highlights": [
-        "Managed a distributed team (3 in India and 1 in Gothenburg) of a total 6 direct reports",
+        "Managed a distributed team (Stockholm, Gothenburg and India) of a total 6 direct reports",
         "Recruiting new staff and consultants",
         "Facilitated adoption of agile principles within the team",
         "Expanding CI/CD and DevOps to new teams",
@@ -104,7 +104,7 @@
       "startDate": "2015-02-28",
       "endDate": "2017-05-31",
       "highlights": [
-        "Managed a distributed team (3 in India and 2 in Gothenburg) of 16 direct reports",
+        "Managed a distributed team (Stockholm, Gothenburg and India) of 16 direct reports",
         "Recruiting new staff and consultants",
         "Facilitated adoption of agile principles within the team",
         "Insourcing of IT services (600+ systems and 3 staff)",
@@ -115,7 +115,7 @@
         "Incident / Problem management",
         "Workshop and offsite facilitation"
       ],
-      "summary": "I managed two teams. The team was responsible for operating and maintaining Com Hems server platforms (operating systems, software applications and supporting systems) and Com Hems Continuous Delivery platform and implementation. Supporting about 300 developers.",
+      "summary": "I managed two teams. The teams were responsible for operating and maintaining Com Hems server platforms (operating systems, software applications and supporting systems) and Com Hems Continuous Delivery platform and implementation. Supporting about 300 developers.",
       "url": "https://www.linkedin.com/company/com-hem-ab/",
       "location": "Stockholm, Sweden"
     },
